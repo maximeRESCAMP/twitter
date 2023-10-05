@@ -7,23 +7,13 @@ class Header extends StatelessWidget{
      color: Color(0xFF58B0F0),
      child: Padding(
        padding: EdgeInsets.symmetric(vertical: 15),
-       child: Row(
+       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
          children: [
-           Expanded(
-               child: Text(
-                 "Nouveau",
-                 textAlign: TextAlign.left,
-               )),
-           Expanded(
-               child: Text(
-                 "Acceuil",
-                 textAlign: TextAlign.center,
-               )),
-           Expanded(
-               child: Text(
-                 "Rechercher",
-                 textAlign: TextAlign.right,
-               )),
+          IconButton(onPressed: (){}, icon: Image.asset("images/pencil.png",),),
+           Text(
+             "Acceuil",style: TextStyle(color: Colors.white),
+           ),
+           IconButton(onPressed: (){}, icon: Image.asset("images/search.png",),),
          ],
        ),
      ),
